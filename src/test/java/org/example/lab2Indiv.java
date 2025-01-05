@@ -142,8 +142,4 @@ public class lab2Indiv {
         Assert.assertTrue(duration < 5000, "Сторінка завантажується занадто довго.");
     }
 
-
-
-
-
 }

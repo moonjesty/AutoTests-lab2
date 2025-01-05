@@ -15,6 +15,7 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
+
 public class lab2Base {
     private WebDriver chromeDriver; // Об'єкт для керування браузером
     private static final String baseUrl = "https://www.nmu.org.ua/ua/"; // Основна URL сторінка
