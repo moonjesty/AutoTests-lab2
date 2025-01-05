@@ -66,14 +66,15 @@ public class lab2Indiv {
         Assert.assertNotEquals(chromeDriver.getCurrentUrl(), baseUrl);
     }
 
-    // 3 Тест для знаходження елементу за допомогою XPath
+    // 3 Тест для знаходження елементу за допомогою непрямого XPath
     @Test
-    public void testFindProductByText() {
-        // Використовуємо функцію для пошуку елементу за частиною тексту
-        WebElement product = chromeDriver.findElement(By.xpath("/html/body/rz-app-root/div/div/rz-main-header/header/div/div/rz-fat-menu-header-btn/button")); // Знаходимо елемент з частиною тексту
-        Assert.assertNotNull(product); // Перевіряємо, що елемент знайдений
-        product.click(); // Кликаємо по елементу
-        Assert.assertNotEquals(chromeDriver.getCurrentUrl(), baseUrl); // Перевіряємо, що URL змінився
+    public void testButtonRelativeXPath() {
+        WebElement chatSvg = chromeDriver.findElement(By.xpath("//button[contains(@class,'header__button')]"));
+        Assert.assertNotNull(chatSvg);
+        System.out.println(
+                String.format("\nPosition: (%d;%d)",  chatSvg.getLocation().x, chatSvg.getLocation().y)+
+                        String.format("\nSize: %dx%d",  chatSvg.getSize().height, chatSvg.getSize().width)
+        );
     }
 
 
